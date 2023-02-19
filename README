@@ -1,6 +1,6 @@
-1. copy ./push_swap (executable in tester directory folder)
+1. copy ./push_swap (executable in Push_swap_tester folder)
 1. run python3 number_generator (to generate numbers)
 2. copy them
 3. run make
-4. ./tester "copied_numbers"
+4. run ./tester "copied_numbers"
 5. to increase or decrease timing of writing run the command "make T=2" / or change TIMING macro manually (line 7 in tester.c)
