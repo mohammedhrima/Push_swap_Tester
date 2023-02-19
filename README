@@ -2,9 +2,9 @@
 
 2. generate numbers by running: make nums
 
-3. copy them the numbers
+3. copy them numbers
 
-4. run: make re
+4. run: make
 
 5. run: ./tester "copied_numbers"
 
