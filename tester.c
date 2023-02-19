@@ -44,7 +44,7 @@ int printstacks(stack *A, stack *B, int moves)
             printf("|\n");
     }
     printf("\n============================================================================\n");
-    printf("number of moves: %d\n", moves);
+    printf("number of moves: %d\n\n\n", moves);
     // printf("\033[2J");
 #endif
     return (1);
@@ -57,7 +57,7 @@ int is_sorted(stack *A)
     {
         if (A->numbers[i] < A->numbers[i - 1])
         {
-            ft_printf("\033[0;31m verify dakchi 3endek %d < %d\n", A->numbers[i], A->numbers[i - 1]);
+            ft_printf("\033[0;31m KO, numbers aren't sorted %d < %d\n", A->numbers[i], A->numbers[i - 1]);
             return (0);
         }
         i++;
@@ -76,7 +76,7 @@ int swap(stack *X)
     }
     else
     {
-        ft_printf("KO s\n");
+        ft_printf("\033[0;31mKO in swap\n");
         exit(-1);
     }
     return (1);
@@ -92,7 +92,7 @@ int rotate(stack *X)
     }
     else
     {
-        ft_printf("\n\"KO rotate\"\n");
+        ft_printf("\n\"\033[0;31mKO rotate\"\n");
         exit(-1);
     }
     return (1);
@@ -108,7 +108,7 @@ int reverse_rotate(stack *X)
     }
     else
     {
-        ft_printf("\n\"KO reverse rotate\"\n");
+        ft_printf("\n\"\033[0;31mKO reverse rotate\"\n");
         exit(-1);
     }
     return (1);
@@ -126,7 +126,7 @@ int push(stack *src, stack *dst, int len)
     }
     else
     {
-        ft_printf("\n\"KO in push\"\n");
+        ft_printf("\n\"\033[0;31mKO in push\"\n");
         exit(-1);
     }
     return (1);
@@ -182,7 +182,7 @@ int main(int argc, char **argv)
         // ft_printf("child process: executing push_swap...\n");
         if (execve("./push_swap", argv, NULL) < 0)
         {
-            ft_printf("executing push swap failed\n");
+            ft_printf("\033[0;31mexecuting push swap failed\n");
             exit(-1);
         }
     }
@@ -302,7 +302,7 @@ int main(int argc, char **argv)
     }
     else
     {
-        ft_printf("program failed");
+        ft_printf("\033[0;31mprogram failed");
         exit(-1);
     }
 }
