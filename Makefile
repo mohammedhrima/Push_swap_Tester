@@ -2,7 +2,7 @@ NAME= ./tester
 
 SRC = tester.c
 LIB = ./Libft/libft.a
-T = 100
+T = 5000
 
 $(NAME):
 	gcc $(SRC) $(LIB) -D TIMING=$(T) -o tester

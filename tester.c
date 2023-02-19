@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include "Libft/libft.h"
 #ifndef TIMING
-#define TIMING 100
+#define TIMING 40
 #endif
 // structs
 typedef struct stack
@@ -15,55 +15,54 @@ typedef struct stack
 
 void mysleep(int time)
 {
-	float q = 0;
-	while (q < time * 100)
-		q += 0.001;
+    float q = 0;
+    while (q < time)
+        q += 0.001;
 }
-
 
 int printstacks(stack *A, stack *B, int moves)
 {
 #if 1
-	mysleep(TIMING);
+    mysleep(TIMING);
 
-	printf("\e[0;32m\n============================================================================\n");
-	int j = 0;
-	int k = 0;
-	printf("stack A   \n");
-	while (j < A->lenght)
-	{
-		printf("%4d ", A->numbers[j++]);
-		if (j % 15 == 0)
-			printf("|\n");
-	}
-	j = 0;
-	printf("\n\nstack B\n");
-	while (j < B->lenght)
-	{
-		printf("%4d ", B->numbers[j++]);
-		if (j % 15 == 0) // (j % (len / 8) == 0)
-			printf("|\n");
-	}
-	printf("\n============================================================================\n");
-	printf("number of moves: %d\n", moves);
-	// printf("\033[2J");
+    printf("\e[0;32m\n============================================================================\n");
+    int j = 0;
+    int k = 0;
+    printf("stack A   \n");
+    while (j < A->lenght)
+    {
+        printf("%6d ", A->numbers[j++]);
+        if (j % 15 == 0)
+            printf("|\n");
+    }
+    j = 0;
+    printf("\n\nstack B\n");
+    while (j < B->lenght)
+    {
+        printf("%6d ", B->numbers[j++]);
+        if (j % 15 == 0) // (j % (len / 8) == 0)
+            printf("|\n");
+    }
+    printf("\n============================================================================\n");
+    printf("number of moves: %d\n", moves);
+    // printf("\033[2J");
 #endif
-	return (1);
+    return (1);
 }
 
 int is_sorted(stack *A)
 {
-	int i = 1;
-	while (i < A->lenght)
-	{
-		if (A->numbers[i] < A->numbers[i - 1])
-		{
-			ft_printf("\033[0;31m verify dakchi 3endek %d < %d\n", A->numbers[i], A->numbers[i - 1]);
-			return (0);
-		}
-		i++;
-	}
-	return (1);
+    int i = 1;
+    while (i < A->lenght)
+    {
+        if (A->numbers[i] < A->numbers[i - 1])
+        {
+            ft_printf("\033[0;31m verify dakchi 3endek %d < %d\n", A->numbers[i], A->numbers[i - 1]);
+            return (0);
+        }
+        i++;
+    }
+    return (1);
 }
 
 // moves
@@ -294,16 +293,16 @@ int main(int argc, char **argv)
         i = 0;
         while (i < A.lenght)
         {
-            ft_printf("%d ", A.numbers[i]);
-            i++;
+            printf("%6d ", A.numbers[i++]);
+            if (i % 15 == 0) // (j % (len / 8) == 0)
+                printf("|\n");
         }
         is_sorted(&A);
-        ft_printf("\n\nyou did %d move\n", moves);
+        printf("\n\nyou did %d move\n", moves);
     }
     else
     {
         ft_printf("program failed");
         exit(-1);
     }
-
 }
