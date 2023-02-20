@@ -10,13 +10,13 @@ tests = None
 os.system("make -C ../ && make clean -C ../")
 
 while not tests or not tests.isdigit():
-    tests = input("\nhow many test you want: ")
+    tests = input("\nhow many tests you want: ")
 
 tests = int(tests)
 while tests:
     tests -= 1
     while not string or not string.isdigit():
-        string = input("\nhow many random numbers you need: ")
+        string = input("\nhow many generated numbers you need: ")
     if num is None: num = int(string)
 
     while negative_numbers != 'y' and negative_numbers != 'n':
