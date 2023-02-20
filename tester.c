@@ -180,7 +180,7 @@ int main(int argc, char **argv)
         ft_printf("\n\nExecuting ./push_swap...\n");
         dup2(fd[1], STDOUT_FILENO);
         // ft_printf("child process: executing push_swap...\n");
-        if (execve("./push_swap", argv, NULL) < 0)
+        if (execve("../push_swap", argv, NULL) < 0)
         {
             ft_printf("\033[0;31mexecuting push swap failed\n");
             exit(-1);

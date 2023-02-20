@@ -1,4 +1,5 @@
-1. copy ./push_swap (executable in Push_swap_tester directory)
+1. git clone https://github.com/mohammedhrima/Push_swap_Tester Push_swap_Tester
+2. cd Push_swap_Tester
 2. run: make tests (for fast tests execution)
 3. run: make debug (for slow tests execution) in case you want to debug your code
 
