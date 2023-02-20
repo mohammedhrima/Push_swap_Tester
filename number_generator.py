@@ -1,5 +1,4 @@
 import os
-import sys
 import random
 
 string = None
@@ -13,10 +12,12 @@ while not tests or not tests.isdigit():
     tests = input("\nhow many tests you want: ")
 
 tests = int(tests)
-while tests:
-    tests -= 1
+i = 0;
+while i < tests:
+    print("\ntest " + str(i))
+    i += 1
     while not string or not string.isdigit():
-        string = input("\nhow many generated numbers you need: ")
+        string = input("how many generated numbers you need: ")
     if num is None: num = int(string)
 
     while negative_numbers != 'y' and negative_numbers != 'n':
