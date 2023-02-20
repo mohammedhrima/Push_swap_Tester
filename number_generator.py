@@ -7,6 +7,8 @@ num = None
 negative_numbers = None
 tests = None
 
+os.system("make -C ../ && make clean -C ../")
+
 while not tests or not tests.isdigit():
     tests = input("\nhow many test you want: ")
 

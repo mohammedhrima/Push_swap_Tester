@@ -1,5 +1,8 @@
-1. git clone https://github.com/mohammedhrima/Push_swap_Tester Push_swap_Tester
-2. cd Push_swap_Tester
-2. run: make tests (for fast tests execution)
-3. run: make debug (for slow tests execution) in case you want to debug your code
+1. git clone https://github.com/mohammedhrima/Push_swap_Tester tester
+
+// for fast tests execution
+2. make tests -C ./tester
+
+// for slow tests execution in case you want to debug your code
+3. make debug -C ./tester   
 
