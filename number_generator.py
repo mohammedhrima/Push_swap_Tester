@@ -12,7 +12,7 @@ while not tests or not tests.isdigit():
     tests = input("\nhow many tests you want: ")
 
 tests = int(tests)
-i = 0;
+i = 0
 while i < tests:
     print("\ntest " + str(i))
     i += 1
