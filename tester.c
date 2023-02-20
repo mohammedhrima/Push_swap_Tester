@@ -25,7 +25,7 @@ int printstacks(stack *A, stack *B, int moves)
 #if 1
     mysleep(TIMING);
 
-    printf("\e[0;32m\n============================================================================\n");
+    printf("\e[0;32m\n==========================================================================================================\n");
     int j = 0;
     int k = 0;
     printf("stack A   \n");
@@ -43,7 +43,7 @@ int printstacks(stack *A, stack *B, int moves)
         if (j % 15 == 0) // (j % (len / 8) == 0)
             printf("|\n");
     }
-    printf("\n============================================================================\n");
+    printf("\n==========================================================================================================\n");
     printf("number of moves: %d\n\n\n", moves);
     // printf("\033[2J");
 #endif
@@ -57,7 +57,7 @@ int is_sorted(stack *A)
     {
         if (A->numbers[i] < A->numbers[i - 1])
         {
-            ft_printf("\033[0;31m KO, numbers aren't sorted %d < %d\033[0;37m\n", A->numbers[i], A->numbers[i - 1]);
+            ft_printf("\n\033[0;31m KO, numbers aren't sorted %d < %d\033[0;37m\n", A->numbers[i], A->numbers[i - 1]);
             return (0);
         }
         i++;
