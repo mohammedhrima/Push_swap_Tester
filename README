@@ -1,4 +1,4 @@
 1. copy ./push_swap (executable in Push_swap_tester directory)
 2. run: make tests (for fast tests execution)
-3. run: make debug (for slow test execution) in case you want to debug your code
+3. run: make debug (for slow tests execution) in case you want to debug your code
 
