@@ -57,7 +57,7 @@ int is_sorted(stack *A)
     {
         if (A->numbers[i] < A->numbers[i - 1])
         {
-            ft_printf("\033[0;31m KO, numbers aren't sorted %d < %d\n", A->numbers[i], A->numbers[i - 1]);
+            ft_printf("\033[0;31m KO, numbers aren't sorted %d < %d\033[0;37m\n", A->numbers[i], A->numbers[i - 1]);
             return (0);
         }
         i++;
@@ -76,7 +76,7 @@ int swap(stack *X)
     }
     else
     {
-        ft_printf("\033[0;31mKO in swap\n");
+        ft_printf("\033[0;31mKO in swap\033[0;37m\n");
         exit(-1);
     }
     return (1);
@@ -92,7 +92,7 @@ int rotate(stack *X)
     }
     else
     {
-        ft_printf("\n\"\033[0;31mKO rotate\"\n");
+        ft_printf("\n\"\033[0;31mKO rotate\"\033[0;37m\n");
         exit(-1);
     }
     return (1);
@@ -108,7 +108,7 @@ int reverse_rotate(stack *X)
     }
     else
     {
-        ft_printf("\n\"\033[0;31mKO reverse rotate\"\n");
+        ft_printf("\n\"\033[0;31mKO reverse rotate\"\033[0;37m\n");
         exit(-1);
     }
     return (1);
@@ -126,7 +126,7 @@ int push(stack *src, stack *dst, int len)
     }
     else
     {
-        ft_printf("\n\"\033[0;31mKO in push\"\n");
+        ft_printf("\n\"\033[0;31mKO in push\"\033[0;37m\n");
         exit(-1);
     }
     return (1);
@@ -298,7 +298,7 @@ int main(int argc, char **argv)
                 printf("|\n");
         }
         is_sorted(&A);
-        printf("\n\nyou did %d move\n", moves);
+        printf("\n\nyou did %d move\033[0;37m\n", moves);
     }
     else
     {
