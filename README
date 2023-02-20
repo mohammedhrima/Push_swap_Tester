@@ -1,10 +1,10 @@
-0. open push_swap directory
+open push_swap directory and copy past the following commands
 
-1. git clone https://github.com/mohammedhrima/Push_swap_Tester tester
+git clone https://github.com/mohammedhrima/Push_swap_Tester tester
 
 // for fast tests execution
-2. make tests -C ./tester
+make tests -C ./tester
 
 // for slow tests execution in case you want to debug your code
-3. make debug -C ./tester   
+make debug -C ./tester   
 
