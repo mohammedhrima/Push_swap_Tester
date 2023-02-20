@@ -14,7 +14,7 @@ while not tests or not tests.isdigit():
 tests = int(tests)
 i = 0
 while i < tests:
-    print("\ntest " + str(i))
+    print("\ntest " + str(i + 1))
     i += 1
     while not string or not string.isdigit():
         string = input("how many generated numbers you need: ")
