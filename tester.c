@@ -297,8 +297,9 @@ int main(int argc, char **argv)
             if (i % 15 == 0) // (j % (len / 8) == 0)
                 printf("|\n");
         }
-        is_sorted(&A);
-        printf("\n\nyou did %d move\033[0;37m\n", moves);
+        if(is_sorted(&A))
+            printf("\n\nnumbers are sorted\n");
+        printf("\nyou did %d move\033[0;37m\n", moves);
     }
     else
     {
