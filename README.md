@@ -16,7 +16,7 @@
 ```bash
     how many tests you want:                        // number of tests 
     how many generated numbers you need: 100        // 100 generate number
-    with negative numbers ? [y/n]: y/n              // yes or no
+    with negative numbers ? [y/n]:                  // yes or no
     Press Enter to start the test...
 ```
 
