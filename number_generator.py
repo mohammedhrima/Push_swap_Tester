@@ -1,13 +1,18 @@
 import os
 import random
+import signal
 
 string = None
 num = None
 negative_numbers = None
 tests = None
 
+def handler(signum, frame):
+    exit(0)
+
 os.system("make -C ../ && make clean -C ../")
 
+signal.signal(signal.SIGINT, handler)
 while not tests or not tests.isdigit():
     tests = input("\nhow many tests you want: ")
 
@@ -16,6 +21,7 @@ i = 0
 while i < tests:
     print("\ntest " + str(i + 1))
     i += 1
+
     while not string or not string.isdigit():
         string = input("how many generated numbers you need: ")
     if num is None: num = int(string)
