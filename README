@@ -1,10 +1,16 @@
 open push_swap directory and copy past the following commands
 
-git clone https://github.com/mohammedhrima/Push_swap_Tester tester
+git clone https://github.com/mohammedhrima/Push_swap_Tester.git
 
 // to test your push_swap 
-make tests -C ./tester
+make tests -C ./Push_swap_Tester
 
 //to debug your push_swap
-make debug -C ./tester   
+make debug -C ./Push_swap_Tester
 
+
+when running the test, you will get the following outputs:
+    how many tests you want: 1 for one test, 2 for two tests, etc..
+    how many generated numbers you need: 100 -> 100 generated number / 500 -> 500 generated number
+    with negative numbers ? [y/n]: y -> yes / n -> no
+    Press Enter to start the test...
