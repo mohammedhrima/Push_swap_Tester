@@ -3,17 +3,17 @@
 
 - Clone th repo
 ```bash
-  git clone https://github.com/mohammedhrima/Push_swap_Tester
+  git clone https://github.com/mohammedhrima/Push_swap_Tester tester
 ```
 
 - Test your push_swap by running 
 ```bash
-  make tests -C ./Push_swap_Tester
+  make tests -C ./tester
 ```
 
 - Debug your push_swap by running 
 ```bash
-  make debug -C ./Push_swap_Tester
+  make debug -C ./tester
 ```
 
 
