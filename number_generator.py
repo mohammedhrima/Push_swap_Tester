@@ -8,6 +8,7 @@ negative_numbers = None
 tests = None
 
 def handler(signum, frame):
+    os.system("make fclean -C ../ && make fclean")
     exit(0)
 
 os.system("make -C ../ && make clean -C ../")
@@ -24,7 +25,7 @@ while not string or not string.isdigit():
 num = int(string) # test of 100 or 500 for example
 
 while negative_numbers != 'y' and negative_numbers != 'n':
-    negative_numbers = input("\nwith negative numbers ? [y/n]: ")
+    negative_numbers = input("with negative numbers ? [y/n]: ")
 
 i = 0
 while i < tests:
@@ -35,7 +36,7 @@ while i < tests:
     if negative_numbers == 'n':
         numbers = random.sample(range(10 * num), num)
     
-    print("\nGenerated numbers are :")
+    print("Generated numbers are :")
     [print(i, end=' ') for i in numbers]
 
     test = input("\n\nPress Enter to start the test...")
