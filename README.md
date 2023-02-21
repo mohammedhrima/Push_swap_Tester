@@ -1,6 +1,11 @@
 
 ## how to use
 
+- Clone th repo
+```bash
+  git clone https://github.com/mohammedhrima/Push_swap_Tester
+```
+
 - Test your push_swap by running 
 ```bash
   make tests -C ./Push_swap_Tester
