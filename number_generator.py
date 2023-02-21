@@ -8,7 +8,7 @@ negative_numbers = None
 tests = None
 
 def handler(signum, frame):
-    os.system("make fclean -C ../ && make fclean")
+    os.system("make fclean -C ../ && rm -rf tester")
     exit(0)
 
 os.system("make -C ../ && make clean -C ../")
