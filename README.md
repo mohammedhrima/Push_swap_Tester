@@ -1,7 +1,7 @@
 
 ## how to use
 
-- Clone th repo
+- Clone the repo
 ```bash
   git clone https://github.com/mohammedhrima/Push_swap_Tester tester
 ```
