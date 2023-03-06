@@ -13,7 +13,7 @@
 
 - Debug your push_swap by running 
 ```bash
-  make tests -C ./Push_swap_Tester
+  make debug -C ./Push_swap_Tester
 ```
 
 
